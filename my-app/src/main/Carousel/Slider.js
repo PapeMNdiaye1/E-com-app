@@ -49,7 +49,9 @@ const Slider = (props) => {
     const resize = () => {
       resizeRef.current();
     };
-
+    // #############################
+    let nimp = "ZZZ22";
+    // ##########################
     const transitionEnd = window.addEventListener("transitionend", smooth);
     const onResize = window.addEventListener("resize", resize);
 
