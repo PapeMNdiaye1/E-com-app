@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.the-slider-container {
+  widows: 100%;
+  height: 30em;
+  background: seagreen;
+}
+/*# sourceMappingURL=style.css.map */
