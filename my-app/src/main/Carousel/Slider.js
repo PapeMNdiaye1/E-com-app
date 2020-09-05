@@ -49,9 +49,7 @@ const Slider = (props) => {
     const resize = () => {
       resizeRef.current();
     };
-    // #############################
-    let nimp = "ZZZ22";
-    // ##########################
+
     const transitionEnd = window.addEventListener("transitionend", smooth);
     const onResize = window.addEventListener("resize", resize);
 
@@ -142,10 +140,9 @@ Slider.defaultProps = {
 
 const SliderCSS = css`
   position: relative;
-  height: 30vw;
-  width: 100vw;
+  height: 40vw;
+  width: 100;
   margin: auto;
-  margin-top: 2em;
   overflow: hidden;
 `;
 export default Slider;

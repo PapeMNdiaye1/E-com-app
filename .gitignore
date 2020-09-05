@@ -1,8 +1,1 @@
 *.json
-# my-app/node_modules/
-# my-app/.env
-# my-app/*.orig
-# my-app/*.scss
-# my-app/*.map
-# my-app/.idea/
-# my-app/.vscode/
