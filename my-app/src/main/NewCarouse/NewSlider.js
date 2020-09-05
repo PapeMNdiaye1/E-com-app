@@ -1,7 +1,6 @@
 import React from "react";
 import NewSliderContainer from "./NewSliderContainer";
 import Arrows from "./Arrows";
-import NewSlide from "./NewSlide";
 import { useState } from "react";
 import { memo } from "react";
 
@@ -11,14 +10,14 @@ const NewSlider = ({ slides }) => {
   const [state, setState] = useState({ Translate: 0 });
 
   const slideToLeft = () => {
-    if (state.Translate !== 0) {
-      setState({ Translate: state.Translate + TheWidth });
+    if (state.Translate < 0) {
+      setState({ Translate: state.Translate + TheWidth / 3 });
     }
   };
 
   const slideToRight = () => {
-    if (state.Translate !== -(TheWidth * slides.length - TheWidth)) {
-      setState({ Translate: state.Translate - TheWidth });
+    if (state.Translate > -(TheWidth * slides.length - TheWidth)) {
+      setState({ Translate: state.Translate - TheWidth / 3 });
     }
   };
 
@@ -29,7 +28,15 @@ const NewSlider = ({ slides }) => {
         TheWidth={TheWidth * slides.length}
       >
         {slides.map((slide, i) => (
-          <NewSlide key={i} TheWidth={TheWidth} Image={slide} />
+          <div className="new-slide" key={i} style={{ width: TheWidth + "em" }}>
+            {slide.map((innerSlide, i) => (
+              <div
+                className="scroll-items"
+                key={i}
+                style={{ backgroundImage: `url(${innerSlide})` }}
+              ></div>
+            ))}
+          </div>
         ))}
       </NewSliderContainer>
       <Arrows Position={"left"} handleClick={slideToLeft}></Arrows>

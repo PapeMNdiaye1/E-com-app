@@ -8,6 +8,11 @@
   position: relative;
 }
 
+body {
+  --color0: #f1f1f1;
+  --colorX: #222;
+}
+
 .header {
   position: fixed;
   top: 0%;
@@ -31,8 +36,6 @@
 
 .Home .the-home-slider-container {
   width: 100%;
-  height: 30em;
-  background: sandybrown;
   z-index: 2;
   margin-top: 8em;
   overflow: hidden;
@@ -52,21 +55,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .Home .shop-new .new-items {
   width: 20em;
   height: 20em;
-  background: sienna;
+  background: var(--colorX);
 }
 
 .Home .products-recommendation {
   width: 100%;
   height: 20em;
-  background: salmon;
   margin-bottom: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,18 +84,30 @@
 .Home .products-recommendation .products-recommendation-text {
   widows: 30%;
   height: 100%;
-  background: seagreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Home .products-recommendation .products-recommendation-slider {
   width: 70%;
   height: 100%;
-  background: skyblue;
+}
+
+.Home .divers-items {
+  width: 100%;
+  height: 50em;
+  background: var(--colorX);
 }
 
 .new-slider {
   height: 20em;
-  background: seagreen;
   overflow: hidden;
   margin: auto;
 }
@@ -145,5 +159,33 @@
   height: 20em;
   background-size: 100%;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.new-slider .new-slider-container .new-slide .scroll-items {
+  margin-left: 2em;
+  width: 30%;
+  height: 90%;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.new-slider .new-slider-container .new-slide .scroll-items:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=style.css.map */

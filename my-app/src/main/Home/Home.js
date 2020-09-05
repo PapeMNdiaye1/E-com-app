@@ -1,13 +1,25 @@
 import React from "react";
 import Header from "./Header";
-// import Slider from "../Carousel/Slider";
+import Slider from "../Carousel/Slider";
 import NewSlider from "../NewCarouse/NewSlider";
+import images1 from "../img/D_Homepage_0900_Multi-v2.gif";
+import images2 from "../img/4d8af896696a71f0c867c7376304994b.jpg";
+import images3 from "../img/c6a58be3a278d0d5697736ac0175e609.jpg";
+import images4 from "../img/27f01367c98be2cef6813474216af2d0.jpg";
+import images5 from "../img/82e07f1cdf73c7bcf90ad63882614141.jpg";
 
 const images = [
-  "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-  "https://images.unsplash.com/photo-1470341223622-1019832be824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2288&q=80",
-  "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2094&q=80",
-  "https://images.unsplash.com/photo-1534161308652-fdfcf10f62c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2174&q=80",
+  `${images1}`,
+  `${images1}`,
+  `${images1}`,
+  `${images1}`,
+  `${images1}`,
+];
+
+const myImage = [
+  [`${images3}`, `${images3}`, `${images3}`],
+  [`${images3}`, `${images3}`, `${images3}`],
+  [`${images3}`, `${images3}`],
 ];
 
 export default function Home() {
@@ -15,7 +27,7 @@ export default function Home() {
     <div className="Home">
       <Header></Header>
       <div className="the-home-slider-container">
-        <NewSlider slides={images}></NewSlider>
+        <Slider slides={images} autoPlay={false}></Slider>
       </div>
       <div className="shop-new">
         <div className="new-items"></div>
@@ -26,7 +38,14 @@ export default function Home() {
         <div className=" products-recommendation-text">
           <h1>You May Also Like</h1>
         </div>
-        <div className="products-recommendation-slider"></div>
+        <div className="products-recommendation-slider">
+          <NewSlider slides={myImage}></NewSlider>
+        </div>
+      </div>
+      <div className="divers-items">
+        <div className="diver-item"></div>
+        <div className="diver-item"></div>
+        <div className="diver-item"></div>
       </div>
     </div>
   );

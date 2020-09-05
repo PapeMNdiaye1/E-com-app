@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
+// import { css, jsx } from "@emotion/core";
 
 const Slide = ({ content }) => {
   const SlideCSS = css`
