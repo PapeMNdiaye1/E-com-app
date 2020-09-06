@@ -5,7 +5,7 @@ import rightArrow from "../img/right-arrow.svg";
 const Arrows = ({ handleClick, Position }) => {
   return (
     <div
-      style={Position === "left" ? { left: "1em" } : { right: "1em" }}
+      style={Position === "left" ? { left: "4em" } : { right: "1em" }}
       className="arrows"
       onClick={handleClick}
     >

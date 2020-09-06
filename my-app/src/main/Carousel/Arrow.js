@@ -9,14 +9,13 @@ const Arrow = ({ direction, handleClick }) => (
     onClick={handleClick}
     css={css`
       display: flex;
-
       position: absolute;
       top: 50%;
       ${direction === "right" ? `right: 25px` : `left: 25px`};
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       justify-content: center;
-      background: white;
+      background: #f1f1f1;
       border-radius: 0.2em;
       cursor: pointer;
       align-items: center;

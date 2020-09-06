@@ -10,7 +10,7 @@ const NewSlider = ({ slides }) => {
   const [state, setState] = useState({ Translate: 0 });
 
   const slideToLeft = () => {
-    if (state.Translate < 0) {
+    if (state.Translate < TheWidth / 3) {
       setState({ Translate: state.Translate + TheWidth / 3 });
     }
   };
@@ -34,7 +34,12 @@ const NewSlider = ({ slides }) => {
                 className="scroll-items"
                 key={i}
                 style={{ backgroundImage: `url(${innerSlide})` }}
-              ></div>
+              >
+                <div className="scroll-items-infos-contain">
+                  <h2>Product Name</h2>
+                  <br /> <h3>$00.0</h3>{" "}
+                </div>
+              </div>
             ))}
           </div>
         ))}
